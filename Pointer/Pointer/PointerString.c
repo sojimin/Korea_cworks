@@ -1,0 +1,33 @@
+#include<stdio.h>
+
+int main() 
+{
+	// 문자열 - 1차원 배열
+	// char word[] = "apple";  
+	// printf("%s\n", word);
+	
+	// 2차원 배열 - word[단어개수][철자의 최대개수]
+	char word[][10] = { "apple", "banana", "grape"};
+	int size;
+
+	// printf("%s\n", word[0]);
+	// printf("%s\n", word[1]);
+	
+	size = sizeof(word) / sizeof(word[0]);
+	printf("%d %d\n", sizeof(word), sizeof(word[0]));
+
+	for (int i = 0; i < size;i++) 
+	{
+		printf("%s\n", word[i]);
+	}
+
+	printf("===================================\n");
+	
+	// 문자열 포인터
+	char *fruit[] = { "apple", "banana", "grape"};
+
+	printf("%s\n", fruit[0]);
+	printf("%s\n", fruit[1]);
+
+	return 0;
+}
